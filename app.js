@@ -176,7 +176,8 @@ function calculate(numArray){
     })
     let filtered = numArray.filter(x=>!(x==null));
     if(filtered.length>1) err();
-    if(!isError)display.textContent = filtered[0].number;
+    let ans = parseFloat(filtered[0].number.toFixed(3));
+    if(!isError)display.textContent = ans;
 }
 function err(){
     display.textContent = "Error";
